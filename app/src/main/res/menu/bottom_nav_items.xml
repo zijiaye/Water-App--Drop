@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/ic_report"
+        android:icon="@drawable/ic_source_report"
+        android:title="@string/sourceReport" />
+
+    <item
+        android:id="@+id/ic_add"
+        android:icon="@drawable/ic_purity_report"
+        android:title="@string/purityReport" />
+
+    <item
+        android:id="@+id/ic_map"
+        android:icon="@drawable/ic_map"
+        android:title="@string/map" />
+
+
+    <item
+        android:id="@+id/ic_graph"
+        android:icon="@drawable/ic_graph"
+        android:title="@string/graph" />
+
+
+    <item
+        android:id="@+id/ic_setting"
+        android:icon="@drawable/ic_setting"
+        android:title="@string/setting" />
+
+
+</menu>

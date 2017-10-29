@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="gatech.cs2340.android.drop">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <service
+        android:name="gatech.cs2340.android.drop.controllers.GPSTracker"
+        android:enabled="true" >
+    </service>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".controllers.WelcomeActivity">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Register Activity -->
+        <activity
+            android:name=".controllers.RegisterActivity"
+            android:label="Register"
+            android:parentActivityName=".controllers.RegisterActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.WelcomeActivity" />
+        </activity>
+        <!-- Login Activity -->
+        <activity
+            android:name=".controllers.LoginActivity"
+            android:label="Sign In"
+            android:parentActivityName=".controllers.LoginActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.WelcomeActivity" />
+        </activity>
+        <!-- Retrieve Password Activity -->
+        <activity
+            android:name=".controllers.RetrievePasswordActivity"
+            android:label="Retrieve Password"
+            android:parentActivityName=".controllers.RetrievePasswordActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.LoginActivity" />
+        </activity>
+        <!-- Report Activity -->
+        <activity
+            android:name=".controllers.SourceReportActivity"
+            android:label="Source Reports"
+            android:parentActivityName=".controllers.SourceReportActivity"
+            android:theme="@style/InApp">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.SourceReportActivity" />
+        </activity>
+        <!-- Add Report Activity -->
+        <activity
+            android:name=".controllers.PurityReportActivity"
+            android:label="Add Report"
+            android:parentActivityName=".controllers.PurityReportActivity"
+            android:theme="@style/InApp">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.SourceReportActivity" />
+        </activity>
+        <!-- Historical Report Activity -->
+        <activity
+            android:name=".controllers.HistoricalActivity"
+            android:label="Historical Report"
+            android:parentActivityName=".controllers.HistoricalActivity"
+            android:theme="@style/InApp">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.SourceReportActivity" />
+        </activity>
+        <!-- Setting Activity -->
+        <activity
+            android:name=".controllers.SettingActivity"
+            android:label="Setting"
+            android:parentActivityName=".controllers.SettingActivity"
+            android:theme="@style/InApp">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.SourceReportActivity" />
+        </activity>
+        <!-- Edit Profile Activity -->
+        <activity
+            android:name=".controllers.EditProfileActivity"
+            android:label="Edit Profile"
+            android:parentActivityName=".controllers.EditProfileActivity"
+            android:theme="@style/InApp">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.SettingActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.AddSourceReportActivity"
+            android:label="Add Source Report"
+            android:parentActivityName=".controllers.AddSourceReportActivity"
+            android:theme="@style/InApp">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.SourceReportActivity" />
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".controllers.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".controllers.AddPurityReportActivity"
+            android:label="Add Purity Report"
+            android:parentActivityName=".controllers.PurityReportActivity"
+            android:theme="@style/InApp">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.PurityReportActivity" />
+        </activity>
+    </application>
+
+</manifest>
